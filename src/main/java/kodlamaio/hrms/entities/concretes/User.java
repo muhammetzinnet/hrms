@@ -28,4 +28,13 @@ public class User {
 
     @Column(name="status")
     private boolean status;
+
+    public User(int userId, String firstName, String email, String passwordSalt, String passwordHash, boolean status) {
+        this.userId = userId;
+        this.firstName = firstName;
+        this.email = email;
+        this.passwordSalt = passwordSalt;
+        this.passwordHash = passwordHash;
+        this.status = status;
+    }
 }

@@ -31,4 +31,13 @@ public class Employer {
 
     @Column(name="userId")
     private int userId;
+
+    public Employer(int employerId, String employerName, String email, int taxNumber, String website, int userId){
+        this.employerId = employerId;
+        this.employerName = employerName;
+        this.email = email;
+        this.taxNumber = taxNumber;
+        this.website = website;
+        this.userId = userId;
+    }
 }

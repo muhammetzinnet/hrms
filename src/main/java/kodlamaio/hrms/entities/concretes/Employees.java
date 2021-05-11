@@ -31,4 +31,15 @@ public class Employees {
 
     @Column(name="email")
     private String email;
+
+    public Employees(int employeesId, String passwordSalt, String passwordHash, int userId, int systemPersonnelId,
+                     String identificationNumber, String email){
+        this.employeesId = employeesId;
+        this.passwordSalt = passwordSalt;
+        this.passwordHash = passwordHash;
+        this.userId = userId;
+        this.systemPersonnelId = systemPersonnelId;
+        this.identificationNumber = identificationNumber;
+        this.email = email;
+    }
 }

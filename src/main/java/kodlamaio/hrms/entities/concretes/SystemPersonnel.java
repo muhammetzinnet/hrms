@@ -20,4 +20,11 @@ public class SystemPersonnel {
     @Column(name="lastName")
     private String lastName;
 
+    public SystemPersonnel(int systemPersonnelId, String firstName, String lastName){
+        this.systemPersonnelId = systemPersonnelId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+    }
+
 }
