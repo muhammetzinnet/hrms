@@ -6,24 +6,24 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name="systemPersonnels")
+@Table(name="system_personnels")
 public class SystemPersonnel {
 
     @Id
     @GeneratedValue
-    @Column(name="systemPersonnelId")
-    private int systemPersonnelId;
+    @Column(name="system_personnel_id")
+    private int system_personnel_id;
 
-    @Column(name="firstName")
-    private String firstName;
+    @Column(name="first_name")
+    private String first_name;
 
-    @Column(name="lastName")
-    private String lastName;
+    @Column(name="last_name")
+    private String last_name;
 
-    public SystemPersonnel(int systemPersonnelId, String firstName, String lastName){
-        this.systemPersonnelId = systemPersonnelId;
-        this.firstName = firstName;
-        this.lastName = lastName;
+    public SystemPersonnel(int system_personnel_id, String first_name, String last_name){
+        this.system_personnel_id = system_personnel_id;
+        this.first_name = first_name;
+        this.last_name = last_name;
 
     }
 

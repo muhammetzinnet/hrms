@@ -6,21 +6,21 @@ import javax.persistence.*;
 
 @Data
 @Entity
-@Table(name = "jobPositions")
+@Table(name = "job_positions")
 public class JobPosition {
 
     @Id
     @GeneratedValue
-    @Column(name="jobPositionId")
-    private int jobPositionId;
+    @Column(name="job_position_id")
+    private int job_position_id;
 
-    @Column(name="jobPositionName")
-    private String jobPositionName;
+    @Column(name="job_position_name")
+    private String job_position_name;
 
+    public JobPosition(){}
 
-
-    public JobPosition(int jobPositionId, String jobPositionName){
-        this.jobPositionId = jobPositionId;
-        this.jobPositionName = jobPositionName;
+    public JobPosition(int job_position_id, String job_position_name){
+        this.job_position_id = job_position_id;
+        this.job_position_name = job_position_name;
     }
 }

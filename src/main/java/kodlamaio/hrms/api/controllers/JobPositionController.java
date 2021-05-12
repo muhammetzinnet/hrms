@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/jobPositions")
+@RequestMapping("/api/job_positions")
 public class JobPositionController {
 
     private JobPositionService jobPositionService;

@@ -11,33 +11,33 @@ public class Employer {
 
     @Id
     @GeneratedValue
-    @Column(name="employerId")
-    private int employerId;
+    @Column(name="employer_id")
+    private int employer_id;
 
-    @Column(name="employerName")
-    private String employerName;
+    @Column(name="employer_name")
+    private String employer_name;
 
     @Column(name="email")
     private String email;
 
-    @Column(name="taxNumber")
-    private int taxNumber;
+    @Column(name="tax_number")
+    private int tax_number;
 
-    @Column(name="phoneNumber")
-    private int phoneNumber;
+    @Column(name="phone_number")
+    private int phone_number;
 
     @Column(name="website")
     private String website;
 
-    @Column(name="userId")
-    private int userId;
+    @Column(name="user_id")
+    private int user_id;
 
-    public Employer(int employerId, String employerName, String email, int taxNumber, String website, int userId){
-        this.employerId = employerId;
-        this.employerName = employerName;
+    public Employer(int employer_id, String employer_name, String email, int tax_number, String website, int user_id){
+        this.employer_id = employer_id;
+        this.employer_name = employer_name;
         this.email = email;
-        this.taxNumber = taxNumber;
+        this.tax_number = tax_number;
         this.website = website;
-        this.userId = userId;
+        this.user_id = user_id;
     }
 }

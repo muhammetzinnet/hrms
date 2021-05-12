@@ -11,30 +11,30 @@ public class User {
 
     @Id
     @GeneratedValue
-    @Column(name="userId")
-    private int userId;
+    @Column(name="user_id")
+    private int user_id;
 
-    @Column(name="firstName")
-    private String firstName;
+    @Column(name="first_name")
+    private String first_name;
 
     @Column(name="email")
     private String email;
 
-    @Column(name="passwordSalt")
-    private String passwordSalt;
+    @Column(name="password_salt")
+    private String password_salt;
 
-    @Column(name="passwordHash")
-    private String passwordHash;
+    @Column(name="password_hash")
+    private String password_hash;
 
     @Column(name="status")
     private boolean status;
 
-    public User(int userId, String firstName, String email, String passwordSalt, String passwordHash, boolean status) {
-        this.userId = userId;
-        this.firstName = firstName;
+    public User(int user_id, String first_name, String email, String password_salt, String password_hash, boolean status) {
+        this.user_id = user_id;
+        this.first_name = first_name;
         this.email = email;
-        this.passwordSalt = passwordSalt;
-        this.passwordHash = passwordHash;
+        this.password_salt = password_salt;
+        this.password_hash = password_hash;
         this.status = status;
     }
 }
