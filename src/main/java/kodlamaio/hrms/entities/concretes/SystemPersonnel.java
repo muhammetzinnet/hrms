@@ -1,16 +1,20 @@
 package kodlamaio.hrms.entities.concretes;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name="system_personnels")
 public class SystemPersonnel {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="system_personnel_id")
     private int system_personnel_id;
 
@@ -19,12 +23,5 @@ public class SystemPersonnel {
 
     @Column(name="last_name")
     private String last_name;
-
-    public SystemPersonnel(int system_personnel_id, String first_name, String last_name){
-        this.system_personnel_id = system_personnel_id;
-        this.first_name = first_name;
-        this.last_name = last_name;
-
-    }
 
 }

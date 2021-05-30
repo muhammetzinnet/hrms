@@ -1,16 +1,20 @@
 package kodlamaio.hrms.entities.concretes;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name="users")
 public class User {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="user_id")
     private int user_id;
 
@@ -28,13 +32,4 @@ public class User {
 
     @Column(name="status")
     private boolean status;
-
-    public User(int user_id, String first_name, String email, String password_salt, String password_hash, boolean status) {
-        this.user_id = user_id;
-        this.first_name = first_name;
-        this.email = email;
-        this.password_salt = password_salt;
-        this.password_hash = password_hash;
-        this.status = status;
-    }
 }

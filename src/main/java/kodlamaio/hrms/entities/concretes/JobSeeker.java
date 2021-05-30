@@ -1,17 +1,21 @@
 package kodlamaio.hrms.entities.concretes;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Data
 @Entity
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "job_seekers")
 public class JobSeeker {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="job_seeker_id")
     private int job_seeker_id;
 
@@ -33,22 +37,10 @@ public class JobSeeker {
     @Column(name="job_name")
     private String job_name;
 
-    @Column(name="yearof_birth")
-    private Date yearof_birth;
+    @Column(name="year_of_birth")
+    private Date year_of_birth;
 
     @Column(name="user_id")
     private int user_id;
 
-    public JobSeeker(int job_seeker_id, String first_name, String last_name, String identification_number,
-                     String email, int phone_number, String job_name, Date yearof_birth, int user_id){
-        this.job_seeker_id= job_seeker_id;
-        this.first_name=first_name;
-        this.last_name = last_name;
-        this.identification_number = identification_number;
-        this.email=email;
-        this.phone_number = phone_number;
-        this.job_name = job_name;
-        this.yearof_birth = yearof_birth;
-        this.user_id = user_id;
-    }
 }
